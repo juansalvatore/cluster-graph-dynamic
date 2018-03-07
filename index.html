@@ -13,6 +13,13 @@
                 margin: auto;
             }
 
+            .buttonPos {
+                position: absolute;
+                top: 1000px;
+                z-index: 200;
+                left: 100px;
+            }
+
             #vis {
                 width: 2060px;
                 height: 1500px;
@@ -27,9 +34,9 @@
             }
 
             .node circle {
-                fill: lightsteelblue;
-                stroke: steelblue;
-                stroke-width: 1.5px;
+                /* fill: lightsteelblue; */
+                /* stroke: steelblue; */
+                stroke-width: 0px;
             }
 
             .node.leaf circle {
@@ -37,7 +44,10 @@
             }
 
             .node text {
-                font-size: 11px;
+                /* FONT SIZE */
+                font-size: 13px;
+                font-family: 'helvetica';
+                color: black !important;
             }
 
             .link {
@@ -55,11 +65,13 @@
     <body>
 
         <div id="vis"></div>
-        <script src="./colors.js"></script>
+        <script src="./buttons.js"></script>
         <script>
+
             (function () {
 
                 d3.json("https://rawgit.com/annaghi/d3.chart.layout.hierarchy/master/example/data/flare.json", function (error, json) {
+
 
                     var cluster = d3.select("#vis").append("svg")
 
@@ -70,42 +82,79 @@
                         .levelGap(250)
                         .zoomable([0.1, 3])
                         .collapsible(4)
-                        //.duration(200)
+                        .duration(200)
                         ;
 
                     cluster.draw({
 
-
-
-
                         "name": "Academia de Dise\u0144o",
+                        // level: color de las lineas
+                        "level": "rgba(0,0,255,0.1)",
+                        // type: color de los puntos
+                        "type": "rgba(0,0,255,0.1)",
                         "children": [
                             {
                                 "name": "Virtual Autogestivo",
+                                // level: color de las lineas
+                                "level": "rgba(0,0,255,0.1)",
+                                // type: color de los puntos
+                                "type": "rgba(0,0,255,0.1)",
                                 "children": [
                                     {
                                         "name": "Habilidades Exponenciales",
+                                        // level: color de las lineas
+                                        "level": "rgba(0,0,255,0.1)",
+                                        // type: color de los puntos
+                                        "type": "rgba(0,0,255,0.1)",
                                         "children": [
                                             {
-                                                "name": "Gobierno Abierto"
+                                                "name": "Gobierno Abierto",
+                                                // level: color de las lineas
+                                                "level": "rgba(0,0,255,0.1)",
+                                                // type: color de los puntos
+                                                "type": "rgba(0,0,255,0.1)",
                                             },
                                             {
-                                                "name": "Datos Abiertos"
+                                                "name": "Datos Abiertos",
+                                                // level: color de las lineas
+                                                "level": "rgba(0,0,255,0.1)",
+                                                // type: color de los puntos
+                                                "type": "rgba(0,0,255,0.1)",
                                             },
                                             {
-                                                "name": "Dise\u0144o Centrado en las Personas"
+                                                "name": "Dise\u0144o Centrado en las Personas",
+                                                // level: color de las lineas
+                                                "level": "rgba(0,0,255,0.1)",
+                                                // type: color de los puntos
+                                                "type": "rgba(0,0,255,0.1)",
                                             },
                                             {
-                                                "name": "Evauacion y Monitoreo de Politicas Publicas"
+                                                "name": "Evauacion y Monitoreo de Politicas Publicas",
+                                                // level: color de las lineas
+                                                "level": "rgba(0,0,255,0.1)",
+                                                // type: color de los puntos
+                                                "type": "rgba(0,0,255,0.1)",
                                             },
                                             {
-                                                "name": "Innovacion Publica"
+                                                "name": "Innovacion Publica",
+                                                // level: color de las lineas
+                                                "level": "rgba(0,0,255,0.1)",
+                                                // type: color de los puntos
+                                                "type": "rgba(0,0,255,0.1)",
                                             },
                                             {
-                                                "name": "Aspectos Basicos de Innovacion Publica"
+                                                "name": "Aspectos Basicos de Innovacion Publica",
+                                                // level: color de las lineas
+                                                "level": "rgba(0,0,255,0.1)",
+                                                // type: color de los puntos
+                                                "type": "rgba(0,0,255,0.1)",
                                             },
                                             {
-                                                "name": "Innovacion Civica"
+                                                "name": "Innovacion Civica",
+                                                // level: color de las lineas
+                                                "level": "rgba(0,0,255,0.1)",
+                                                // type: color de los puntos
+                                                "type": "rgba(0,0,255,0.1)",
                                             }
                                         ]
                                     }
@@ -937,6 +986,8 @@
         </script>
 
         <script stc="./svg.js"></script>
+
+        <button id="button-one" class="buttonPos">collapse all</button>
     </body>
 
 </html>

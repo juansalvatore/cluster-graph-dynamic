@@ -5,6 +5,11 @@
  * Copyright (c) 2015 Anna Bansaghi <anna.bansaghi@mamikon.net> (http://mamikon.net)
  * Library released under BSD-3-Clause license.
  */
+// function collapseAll() {
+//   root = d3.select('svg')
+//   root.children.forEach(collapse)
+//   update(root)
+// }
 
 ;(function(global, factory) {
   'use strict'
@@ -224,9 +229,13 @@
             return d._id || (d._id = ++counter)
           })
         },
-
+        // cambiar NODOS
         insert: function() {
-          return this.append('g').classed('node', true)
+          return this.append('g')
+            .classed('node', true)
+            .style('fill', function(d) {
+              return d.type
+            })
         },
 
         events: {
@@ -243,6 +252,10 @@
                 return d[chart.options.name]
               })
               .style('fill-opacity', 0)
+              // TEXT COLOR
+              .style('fill', function(d) {
+                return 'black'
+              })
 
             this.on('click', function(event) {
               chart.trigger('click:node', event)
@@ -263,6 +276,10 @@
             this.select('circle')
               .attr()
               .attr('r', chart.options.radius)
+              // RADIUS
+              .attr('r', function(d) {
+                return 5
+              })
 
             this.select('text').style('fill-opacity', 1)
           },
@@ -286,16 +303,18 @@
             }
           )
         },
-
+        // LINEAS (cambiar color)
         insert: function() {
           var count = 1
           return this.append('path')
-
             .attr('class', function(d) {
-              return 'link ' + 'link' + count++
+              return 'link '
             })
             .attr('id', function(d) {
               return count++
+            })
+            .style('stroke', function(d) {
+              return d.target.level
             })
         },
 
@@ -421,6 +440,7 @@
       chart.off('click:node').on('click:node', function(d) {
         d = toggle(d)
         chart.trigger('transform:stash')
+        console.log(d)
 
         // Set _internalUpdate, so chart will know that certain actions shouldn't
         // be performed during update.
