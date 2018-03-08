@@ -13,7 +13,7 @@ document.addEventListener(
           if (d.size) return Math.log(d.size)
           else return 3
         })
-        .levelGap(250)
+        .levelGap(170)
         .zoomable([0.1, 3])
         .collapsible(4)
         .duration(200)

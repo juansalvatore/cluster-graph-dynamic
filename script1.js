@@ -306,16 +306,20 @@
         // LINEAS (cambiar color)
         insert: function() {
           var count = 1
-          return this.append('path')
-            .attr('class', function(d) {
-              return 'link '
-            })
-            .attr('id', function(d) {
-              return count++
-            })
-            .style('stroke', function(d) {
-              return d.target.level
-            })
+          return (
+            this.append('path')
+              .attr('class', function(d) {
+                return 'link '
+              })
+              .attr('id', function(d) {
+                return count++
+              })
+              .style('stroke', function(d) {
+                return d.target.level
+              })
+              // LINEAS GROSOR
+              .style('stroke-width', 1)
+          )
         },
 
         events: {
