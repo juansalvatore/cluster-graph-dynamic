@@ -309,7 +309,7 @@
           return (
             this.append('path')
               .attr('class', function(d) {
-                return 'link '
+                return 'link'
               })
               .attr('id', function(d) {
                 return count++
@@ -319,6 +319,9 @@
               })
               // LINEAS GROSOR
               .style('stroke-width', 1)
+              .attr('class', function(d) {
+                return 'link ' + d.target.level
+              })
           )
         },
 

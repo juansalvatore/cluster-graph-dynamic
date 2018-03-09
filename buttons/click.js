@@ -10,7 +10,7 @@ document.addEventListener(
     let buttonSeven = document.getElementById('button-seven')
     let buttonEight = document.getElementById('button-eight')
     let buttonNine = document.getElementById('button-nine')
-
+    buttonOne.classList.add('expand')
     buttonOne.addEventListener('click', () => {
       buttonOne.classList.add('expand')
       buttonTwo.classList.remove('expand')

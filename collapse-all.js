@@ -5,9 +5,9 @@ document.addEventListener(
     var counter = initialCounter
     //
     document.getElementById('button-one').addEventListener('click', () => {
-      if (counter == -1) {
-        counter = initialCounter + 1
-      }
+      // if (counter == -1) {
+      //   counter = initialCounter + 1
+      // }
 
       var cluster = d3
         .select('#vis')
@@ -22,7 +22,7 @@ document.addEventListener(
         })
         .levelGap(250)
         .zoomable([0.1, 3])
-        .collapsible(counter)
+        .collapsible(4)
         .duration(200)
       console.log(counter)
 

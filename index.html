@@ -7,108 +7,19 @@
         <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
         <script src="./script2.js"></script>
         <script src="./script1.js"></script>
-        <style>
-            html {
-                display: table;
-                margin: auto;
-                overflow: hidden;
-            }
 
-            body {
-                margin: 0;
-            }
-
-            .buttonContainer {
-                position: absolute;
-                top: 20px;
-                width: 200px;
-                left: 20px;
-
-            }
-
-            select {
-                position: absolute;
-                top: 600px;
-            }
-
-            .button {
-                position: relative;
-                width: 100%;
-                z-index: 200;
-                border: 0px;
-                background-color: #375D7C;
-                color: white;
-                padding-top: 10px;
-                padding-bottom: 10px;
-                font-size: 13px;
-                border-radius: 5px;
-                margin-bottom: 10px;
-                box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.5);
-                transition: all ease-in-out 300ms;
-            }
-
-            .expand {
-                width: 240px;
-                background-color: rgba(255, 255, 255, 0.9);
-                color: black;
-            }
-
-            .button:hover {
-                cursor: pointer;
-                transform: scale(1.05)
-            }
-
-            .buttonOne {
-                color: white !important;
-                background-color: #6E5C7A;
-            }
-
-            #vis {
-                width: 1860px;
-                height: 100vh;
-            }
-
-            .node {
-                cursor: pointer;
-            }
-
-            .node.leaf {
-                cursor: default;
-            }
-
-            .node circle {
-                /* fill: lightsteelblue; */
-                /* stroke: steelblue; */
-                stroke-width: 0px;
-            }
-
-            .node.leaf circle {
-                fill: #fff;
-            }
-
-            .node text {
-                /* FONT SIZE */
-                font-size: 13px;
-                font-family: 'helvetica';
-                color: black !important;
-            }
-
-            .link {
-                fill: none;
-                stroke: #ccc;
-                stroke-width: 1.5px;
-            }
-
-
-
-            #a {
-                stroke: red;
-            }
-        </style>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,300|Roboto:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./styles/general.css">
     </head>
 
     <body>
-
+        <div class="header">
+            <img class="logo-header" src="./img/logo-ministerio-modernizacion.png" alt="ministerio de modernización">
+        </div>
+        <div class="banner">
+            <p class="banner-title">Academia de diseño</p>
+        </div>
         <div id="vis"></div>
         <script src="./buttons/click.js"></script>
         <script src="./collapse-all.js"></script>
@@ -130,6 +41,7 @@
         <script src="./branches/branchEight.js"></script>
 
         <script>
+
 
             (function () {
 
@@ -1540,8 +1452,23 @@
 
                     });
 
+                    // add d3
+                    d3.selectAll('circle').on('click', function (d, i) {
+                        console.log('You clicked on circle ' + i)
+                    })
+
+                    var yellowClass = document.getElementsByClassName('yellow')
+
+                    d3.selectAll('path').each((a) => {
+                        if (a.source.level == "yellow") {
+                            console.log(a.target.level)
+                        }
+                    })
+
                 });
             }());
+
+
         </script>
 
         <script stc="./svg.js"></script>
@@ -1549,24 +1476,25 @@
 
 
         <div class="buttonContainer">
-            <!-- all -->
-            <button id="button-one" class="buttonOne button">COLLAPSE ALL</button>
+
             <!-- branch one -->
-            <button id="button-two" class="buttonTwo button">Virtual Autogestivo</button>
+            <button id="button-two" class="buttonTwo button">Virtual autogestivo (50)</button>
             <!-- branch two -->
-            <button id="button-three" class="buttonThree button">Ciclo Taller</button>
+            <button id="button-three" class="buttonThree button">Ciclo taller (50)</button>
             <!-- branch three -->
-            <button id="button-four" class="buttonFour button">Virtual Tutorado</button>
+            <button id="button-four" class="buttonFour button">Virtual tutorado (50)</button>
             <!-- branch four -->
-            <button id="button-five" class="buttonFive button">Charla Inspira</button>
+            <button id="button-five" class="buttonFive button">Charla inspira (50)</button>
             <!-- branch five -->
-            <button id="button-six" class="buttonSix button">Entrenamientos A Escala</button>
+            <button id="button-six" class="buttonSix button">Entrenamientos a escala (50)</button>
             <!-- branch six -->
-            <button id="button-seven" class="buttonSeven button">Curso Largo</button>
+            <button id="button-seven" class="buttonSeven button">Curso largo (50)</button>
             <!-- branch seven -->
-            <button id="button-eight" class="buttonEight button">Programa Ejecutivo</button>
+            <button id="button-eight" class="buttonEight button">Programa ejecutivo (50)</button>
             <!-- branch eight -->
-            <button id="button-nine" class="buttonNine button">Curso Corto</button>
+            <button id="button-nine" class="buttonNine button">Curso corto (50)</button>
+            <!-- ver todo -->
+            <button id="button-one" class="buttonOne button">Ver todo (240)</button>
         </div>
     </body>
 
