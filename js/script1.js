@@ -313,9 +313,37 @@
                 return d.target.level
               })
               // LINEAS GROSOR
-              .style('stroke-width', 1)
+              .style('stroke-width', 3)
               .attr('class', function(d) {
                 return 'link ' + d.target.level
+              })
+              .on('mouseover', function(d, i) {
+                d3.selectAll('path').style('opacity', 0.1)
+                d3.select(this).style('opacity', 1)
+                let classSelected = $(this)
+                  .attr('class')
+                  .split(' ')[1]
+                console.log(classSelected)
+                let selectedBranch = $('.' + classSelected)
+                console.log(selectedBranch)
+                d3.selectAll(selectedBranch).style('opacity', 1)
+                document.body.style.cursor = 'pointer'
+              })
+              .on('mouseout', function(d) {
+                d3.selectAll('path').style('opacity', 1)
+                document.body.style.cursor = 'default'
+              })
+              .on('click', function(d, i) {
+                d3.selectAll('path').style('opacity', 0.1)
+                d3.select(this).style('opacity', 1)
+                let classSelected = $(this)
+                  .attr('class')
+                  .split(' ')[1]
+                console.log(classSelected)
+                let selectedBranch = $('.' + classSelected)
+                console.log(selectedBranch)
+                d3.selectAll(selectedBranch).style('opacity', 1)
+                document.body.style.cursor = 'pointer'
               })
           )
         },

@@ -25,7 +25,7 @@
       var groupFiveColor = 'violet'
       var groupSixColor = 'brown'
       var groupSevenColor = 'green'
-      var groupEightColor = '#ccc'
+      var groupEightColor = 'grey'
 
       cluster.draw({
         name: 'Academia de Dise\u0144o',
@@ -1437,19 +1437,6 @@
             ],
           },
         ],
-      })
-
-      // add d3
-      d3.selectAll('circle').on('click', function(d, i) {
-        console.log('You clicked on circle ' + i)
-      })
-
-      var yellowClass = document.getElementsByClassName('yellow')
-
-      d3.selectAll('path').each(a => {
-        if (a.source.level == 'yellow') {
-          console.log(a.target.level)
-        }
       })
     }
   )
