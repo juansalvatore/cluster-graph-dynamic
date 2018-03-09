@@ -5,11 +5,6 @@
  * Copyright (c) 2015 Anna Bansaghi <anna.bansaghi@mamikon.net> (http://mamikon.net)
  * Library released under BSD-3-Clause license.
  */
-// function collapseAll() {
-//   root = d3.select('svg')
-//   root.children.forEach(collapse)
-//   update(root)
-// }
 
 ;(function(global, factory) {
   'use strict'
