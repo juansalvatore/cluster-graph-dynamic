@@ -4,7 +4,7 @@
 
 ### Objetivos
 
-- [ ] Posicionar mejor .
+- [ ] Posicionar mejor el centro del gráfico.
 
 - [ ] Crear gráfico más chico al comienzo.
 
