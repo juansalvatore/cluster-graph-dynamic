@@ -239,7 +239,11 @@
               return d.isLeaf
             })
 
-            this.append('circle').attr('r', 0)
+            this.append('circle')
+              .attr('r', 0)
+              .attr('class', function(d) {
+                return d.level
+              })
 
             this.append('text')
               .attr('dy', '.35em')
@@ -306,9 +310,7 @@
           var count = 1
           return (
             this.append('path')
-              .attr('class', function(d) {
-                return 'link'
-              })
+
               .attr('id', function(d) {
                 return count++
               })
@@ -318,7 +320,13 @@
               // LINEAS GROSOR
               .style('stroke-width', 4)
               .attr('class', function(d) {
-                return 'link ' + d.target.level
+                var menu
+                if (d.target.menu === undefined) {
+                  menu = false
+                } else {
+                  menu = true
+                }
+                return 'link ' + d.target.level + ' ' + menu
               })
               // .on('mouseover', function(d, i) {
               //   d3.selectAll('path').style('opacity', 0.05)
@@ -339,17 +347,15 @@
 
               // LINEAS CLICK
               .on('click', function(d, i) {
-                d3.selectAll('path').style('opacity', 0.1)
-                // d3.selectAll('circle').style('opacity', 0.1)
-
-                d3.select(this).style('opacity', 1)
-                let classSelected = $(this)
-                  .attr('class')
-                  .split(' ')[1]
-
-                let selectedBranch = $('.' + classSelected)
-                d3.selectAll(selectedBranch).style('opacity', 1)
-                // document.body.style.cursor = 'pointer'
+                // d3.selectAll('path').style('opacity', 0.1)
+                // // d3.selectAll('circle').style('opacity', 0.1)
+                // d3.select(this).style('opacity', 1)
+                // let classSelected = $(this)
+                //   .attr('class')
+                //   .split(' ')[1]
+                // let selectedBranch = $('.' + classSelected)
+                // d3.selectAll(selectedBranch).style('opacity', 1)
+                // // document.body.style.cursor = 'pointer'
               })
           )
         },

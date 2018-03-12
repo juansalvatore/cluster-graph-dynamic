@@ -40,6 +40,7 @@
             level: groupOneColor,
             // type: color de los puntos
             type: groupOneColor,
+            menu: true,
             children: [
               {
                 name: 'Habilidades Exponenciales',
@@ -105,6 +106,7 @@
             name: 'Ciclo Taller',
             level: groupTwoColor,
             type: groupTwoColor,
+            menu: true,
             children: [
               {
                 name: 'Estado Abierto',
@@ -219,6 +221,7 @@
             name: 'Virtual Tutorado',
             level: groupThreeColor,
             type: groupThreeColor,
+            menu: true,
             children: [
               {
                 name: 'Habilidades Exponenciales',
@@ -253,6 +256,7 @@
             name: 'Charla Inspira',
             level: groupFourColor,
             type: groupFourColor,
+            menu: true,
             children: [
               {
                 name: 'Organizaciones Agiles',
@@ -838,6 +842,7 @@
             name: 'Entrenamientos a Escala',
             level: groupFiveColor,
             type: groupFiveColor,
+            menu: true,
             children: [
               {
                 name: 'Habilidades Exponenciales',
@@ -872,6 +877,7 @@
             name: 'Curso Largo',
             level: groupSixColor,
             type: groupSixColor,
+            menu: true,
             children: [
               {
                 name: 'Estado Abierto',
@@ -1084,6 +1090,7 @@
             name: 'Programa Ejecutivo',
             level: groupSevenColor,
             type: groupSevenColor,
+            menu: true,
             children: [
               {
                 name: 'Ciudades del Futuro',
@@ -1138,6 +1145,7 @@
             name: 'Curso Corto',
             level: groupEightColor,
             type: groupEightColor,
+            menu: true,
             children: [
               {
                 name: 'Organizaciones Agiles',
@@ -1438,6 +1446,53 @@
           },
         ],
       })
+
+      // create buttons
+      var buttonContainer = d3.select('#form-container')
+      var buttonsData = d3.selectAll('path.true')
+      console.log('data', buttonsData[0]) // consultar
+
+      buttonContainer
+        .selectAll('button')
+        .data(buttonsData[0])
+        .enter()
+        .append('button')
+        .attr('class', 'button')
+        .attr('type', 'button')
+        .text(function(d) {
+          return d.__data__.target.name
+        })
+        .on('click', function(d) {
+          var branch = d.className.baseVal.split(' ')[1]
+          d3
+            .selectAll('path')
+            .transition()
+            .style('opacity', 0.1)
+          d3
+            .selectAll('text')
+            .transition()
+            .style('opacity', 0.1)
+          d3
+            .selectAll('circle')
+            .filter(function(d) {
+              if (this.className.baseVal != branch) {
+                return d
+              }
+            })
+            .transition()
+            .style('opacity', 0.1)
+
+          // d3.selectAll('circle').style('opacity', 0.1)
+
+          d3.select(this).style('opacity', 1)
+
+          let selectedBranch = $('.' + branch)
+          d3
+            .selectAll(selectedBranch)
+            .transition()
+            .style('opacity', 1)
+          // document.body.style.cursor = 'pointer'
+        })
     }
   )
 })()
