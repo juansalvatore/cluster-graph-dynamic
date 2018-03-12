@@ -18,14 +18,14 @@
         .collapsible(4)
         .duration(200)
 
-      var groupOneColor = 'red'
-      var groupTwoColor = 'blue'
+      var groupOneColor = 'LightCoral'
+      var groupTwoColor = 'LightBlue'
       var groupThreeColor = 'pink'
       var groupFourColor = 'yellow'
       var groupFiveColor = 'violet'
-      var groupSixColor = 'brown'
-      var groupSevenColor = 'green'
-      var groupEightColor = 'grey'
+      var groupSixColor = 'Moccasin'
+      var groupSevenColor = 'LightGreen'
+      var groupEightColor = 'LightGrey'
 
       cluster.draw({
         name: 'Academia de Dise\u0144o',
@@ -1516,7 +1516,7 @@
       buttonContainer
         .append('button')
         .attr('id', 'button-one')
-        .attr('class', 'button')
+        .attr('class', 'button expand')
         .attr('type', 'button')
         .text('Ver todo')
         .on('click', function(d) {
