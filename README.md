@@ -8,4 +8,4 @@
 
 - [ ] Crear gráfico más chico al comienzo.
 
-- [ ] Armar los botones de la unidad temática de forma dinámica con D3 y generar highlights de ramificaciónes.
+- [x] Armar los botones de la unidad temática de forma dinámica con D3 y generar highlights de ramificaciónes.
