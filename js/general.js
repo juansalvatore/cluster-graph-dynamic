@@ -33,6 +33,7 @@
         level: groupOneColor,
         // type: color de los puntos
         type: groupOneColor,
+
         children: [
           {
             name: 'Virtual Autogestivo',
@@ -78,14 +79,14 @@
                     type: groupOneColor,
                   },
                   {
-                    name: 'Innovacion Publica',
+                    name: 'Aspectos Basicos de Innovacion Publica',
                     // level: color de las lineas
                     level: groupOneColor,
                     // type: color de los puntos
                     type: groupOneColor,
                   },
                   {
-                    name: 'Aspectos Basicos de Innovacion Publica',
+                    name: 'Innovacion Publica',
                     // level: color de las lineas
                     level: groupOneColor,
                     // type: color de los puntos
@@ -172,11 +173,6 @@
                 type: groupTwoColor,
                 children: [
                   {
-                    name: 'El paradigma de la evaluaci\u00f3n participativa',
-                    level: groupTwoColor,
-                    type: groupTwoColor,
-                  },
-                  {
                     name: 'Design Thinking',
                     level: groupTwoColor,
                     type: groupTwoColor,
@@ -188,6 +184,11 @@
                   },
                   {
                     name: 'Aprender mediante la evaluaci\u00f3n',
+                    level: groupTwoColor,
+                    type: groupTwoColor,
+                  },
+                  {
+                    name: 'El paradigma de la evaluaci\u00f3n participativa ',
                     level: groupTwoColor,
                     type: groupTwoColor,
                   },
@@ -221,7 +222,6 @@
             name: 'Virtual Tutorado',
             level: groupThreeColor,
             type: groupThreeColor,
-            menu: true,
             children: [
               {
                 name: 'Habilidades Exponenciales',
@@ -317,10 +317,39 @@
                 ],
               },
               {
+                name: 'Gestion Transparente',
+                level: groupFourColor,
+                type: groupFourColor,
+                children: [
+                  {
+                    name: 'Transparencia fiscal y presupuestaria',
+                    level: groupFourColor,
+                    type: groupFourColor,
+                  },
+                  {
+                    name:
+                      'Acceso a la informaci\u00f3n P\u00fablica: del decreto a la Ley',
+                    level: groupFourColor,
+                    type: groupFourColor,
+                  },
+                  {
+                    name:
+                      'Seguimiento del 3er Plan de Acci\u00f3n Nacional de Gobierno Abierto',
+                    level: groupFourColor,
+                    type: groupFourColor,
+                  },
+                ],
+              },
+              {
                 name: 'Datos y Evidencia',
                 level: groupFourColor,
                 type: groupFourColor,
                 children: [
+                  {
+                    name: 'Evaluaci\u00f3n y Big Data ',
+                    level: groupFourColor,
+                    type: groupFourColor,
+                  },
                   {
                     name: 'Introducci\u00f3n a la Ciencia de Datos',
                     level: groupFourColor,
@@ -346,11 +375,6 @@
                   {
                     name:
                       'Datos Abiertos: La experiencia de Argentina en niveles sub-nacionales',
-                    level: groupFourColor,
-                    type: groupFourColor,
-                  },
-                  {
-                    name: 'Evaluaci\u00f3n y Big Data',
                     level: groupFourColor,
                     type: groupFourColor,
                   },
@@ -399,17 +423,17 @@
                     type: groupFourColor,
                   },
                   {
+                    name: 'Compras y contrataciones abiertas',
+                    level: groupFourColor,
+                    type: groupFourColor,
+                  },
+                  {
                     name: 'Gobierno abierto subnacional',
                     level: groupFourColor,
                     type: groupFourColor,
                   },
                   {
-                    name: 'Gobierno abierto: la experiencia de Argentina',
-                    level: groupFourColor,
-                    type: groupFourColor,
-                  },
-                  {
-                    name: 'Compras y contrataciones abiertas',
+                    name: 'Gobierno abierto: la experiencia de Argentina ',
                     level: groupFourColor,
                     type: groupFourColor,
                   },
@@ -473,6 +497,11 @@
                 children: [
                   {
                     name: 'Economia Colaborativa',
+                    level: groupFourColor,
+                    type: groupFourColor,
+                  },
+                  {
+                    name: 'Blockchain',
                     level: groupFourColor,
                     type: groupFourColor,
                   },
@@ -606,18 +635,17 @@
                     type: groupFourColor,
                   },
                   {
-                    name: 'Nuevas herramientas y recursos para la gesti\u00f3n',
-                    level: groupFourColor,
-                    type: groupFourColor,
-                  },
-                  {
                     name: 'Dise\u0144o - Prototipo',
                     level: groupFourColor,
                     type: groupFourColor,
                   },
                   {
-                    name:
-                      'Pensamiento de dise\u0144o y evaluaci\u00f3n: Mejor juntos',
+                    name: 'Dise\u0144o y uso de Evidencia en Acci\u00f3n',
+                    level: groupFourColor,
+                    type: groupFourColor,
+                  },
+                  {
+                    name: 'Nuevas herramientas y recursos para la gesti\u00f3n',
                     level: groupFourColor,
                     type: groupFourColor,
                   },
@@ -638,11 +666,6 @@
                 level: groupFourColor,
                 type: groupFourColor,
                 children: [
-                  {
-                    name: 'Blockchain',
-                    level: groupFourColor,
-                    type: groupFourColor,
-                  },
                   {
                     name: 'Mocking Bot - Prototipos sin programar',
                     level: groupFourColor,
@@ -708,12 +731,6 @@
                     type: groupFourColor,
                   },
                   {
-                    name:
-                      'Dise\u0144ando el dise\u0144o para disee\u0144adores',
-                    level: groupFourColor,
-                    type: groupFourColor,
-                  },
-                  {
                     name: 'Complejidad / Incertidumbre (VICA)',
                     level: groupFourColor,
                     type: groupFourColor,
@@ -739,7 +756,13 @@
                     type: groupFourColor,
                   },
                   {
-                    name: 'Dise\u0144o de la empat\u00eda',
+                    name: 'Narrativa visual en la gesti\u00f3n',
+                    level: groupFourColor,
+                    type: groupFourColor,
+                  },
+                  {
+                    name:
+                      'Dise\u0144ando el dise\u0144o para disee\u0144adores',
                     level: groupFourColor,
                     type: groupFourColor,
                   },
@@ -759,7 +782,7 @@
                     type: groupFourColor,
                   },
                   {
-                    name: 'Narrativa visual en la gesti\u00f3n',
+                    name: 'Dise\u0144o de la empat\u00eda ',
                     level: groupFourColor,
                     type: groupFourColor,
                   },
@@ -813,23 +836,6 @@
                     type: groupFourColor,
                   },
                   {
-                    name: 'Transparencia fiscal y presupuestaria',
-                    level: groupFourColor,
-                    type: groupFourColor,
-                  },
-                  {
-                    name:
-                      'Acceso a la informaci\u00f3n P\u00fablica: del decreto a la Ley',
-                    level: groupFourColor,
-                    type: groupFourColor,
-                  },
-                  {
-                    name:
-                      'Seguimiento del 3er Plan de Acci\u00f3n Nacional de Gobierno Abierto',
-                    level: groupFourColor,
-                    type: groupFourColor,
-                  },
-                  {
                     name: 'Argentina en el G20',
                     level: groupFourColor,
                     type: groupFourColor,
@@ -845,7 +851,7 @@
             menu: true,
             children: [
               {
-                name: 'Habilidades Exponenciales',
+                name: 'Entrenamiento general',
                 level: groupFiveColor,
                 type: groupFiveColor,
                 children: [
@@ -951,17 +957,18 @@
                     type: groupSixColor,
                   },
                   {
-                    name: 'Introducci\u00f3n a las presentaciones de Gobierno ',
-                    level: groupSixColor,
-                    type: groupSixColor,
-                  },
-                  {
                     name: 'Skills del Siglo XXI',
                     level: groupSixColor,
                     type: groupSixColor,
                   },
                   {
                     name: 'Neurociencia y toma de decisiones',
+                    level: groupSixColor,
+                    type: groupSixColor,
+                  },
+                  {
+                    name:
+                      'Introducci\u00f3n a las presentaciones de Gobierno\n',
                     level: groupSixColor,
                     type: groupSixColor,
                   },
@@ -1026,7 +1033,7 @@
                     type: groupSixColor,
                   },
                   {
-                    name: 'Datos geogr\u00e1ficos con QGis (avanzado)',
+                    name: 'El paradigma de la evaluaci\u00f3n participativa ',
                     level: groupSixColor,
                     type: groupSixColor,
                   },
@@ -1037,11 +1044,6 @@
                   },
                   {
                     name: 'Proceso evaluativo',
-                    level: groupSixColor,
-                    type: groupSixColor,
-                  },
-                  {
-                    name: 'El paradigma de la evaluaci\u00f3n participativa',
                     level: groupSixColor,
                     type: groupSixColor,
                   },
@@ -1068,6 +1070,11 @@
                   },
                   {
                     name: 'An\u00e1lisis de datos con python (avanzado)',
+                    level: groupSixColor,
+                    type: groupSixColor,
+                  },
+                  {
+                    name: 'Datos geogr\u00e1ficos con QGis (avanzado)',
                     level: groupSixColor,
                     type: groupSixColor,
                   },
@@ -1132,11 +1139,6 @@
                     level: groupSevenColor,
                     type: groupSevenColor,
                   },
-                  {
-                    name: 'Programas Ejecutivos',
-                    level: groupSevenColor,
-                    type: groupSevenColor,
-                  },
                 ],
               },
             ],
@@ -1159,6 +1161,19 @@
                   },
                   {
                     name: 'Prototipado',
+                    level: groupEightColor,
+                    type: groupEightColor,
+                  },
+                ],
+              },
+              {
+                name: 'Gestion Transparente',
+                level: groupEightColor,
+                type: groupEightColor,
+                children: [
+                  {
+                    name:
+                      'Acceso a la informaci\u00f3n y datos abiertos - Curso pr\u00e1ctico para periodistas',
                     level: groupEightColor,
                     type: groupEightColor,
                   },
@@ -1221,12 +1236,12 @@
                     type: groupEightColor,
                   },
                   {
-                    name: 'Evaluaci\u00f3n del desarrollo (Developmental)',
+                    name: 'Evaluaci\u00f3n del desarrollo  (Developmental)',
                     level: groupEightColor,
                     type: groupEightColor,
                   },
                   {
-                    name: '\u017cQu\u00e9 son las APIs y c\u00f3mo usarlas?',
+                    name: '\u017cQu\u00e9 son las APIs y c\u00f3mo usarlas? ',
                     level: groupEightColor,
                     type: groupEightColor,
                   },
@@ -1342,12 +1357,6 @@
                 children: [
                   {
                     name:
-                      'Acceso a la informaci\u00f3n y datos abiertos - Curso pr\u00e1ctico para periodistas',
-                    level: groupEightColor,
-                    type: groupEightColor,
-                  },
-                  {
-                    name:
                       'MyE: C\u00f3mo generar indicadores para evaluar pol\u00edticas de gobierno abierto y promover el monitoreo ciudadano',
                     level: groupEightColor,
                     type: groupEightColor,
@@ -1411,7 +1420,12 @@
                     type: groupEightColor,
                   },
                   {
-                    name: 'C\u00f3mo generar comunidad y mantenerla',
+                    name: 'Ser dise\u0144ador  en Gobierno',
+                    level: groupEightColor,
+                    type: groupEightColor,
+                  },
+                  {
+                    name: 'C\u00f3mo generar comunidad y mantenerla ',
                     level: groupEightColor,
                     type: groupEightColor,
                   },
@@ -1427,11 +1441,6 @@
                   },
                   {
                     name: 'Como contar historias a traves de dise\u0144o',
-                    level: groupEightColor,
-                    type: groupEightColor,
-                  },
-                  {
-                    name: 'Ser dise\u0144ador en Gobierno',
                     level: groupEightColor,
                     type: groupEightColor,
                   },
@@ -1547,14 +1556,15 @@
             .transition()
             .style('opacity', 1)
         })
+      // first node style
 
       // zoom
-      d3
-        .select('.zoomController')
-        .attr(
-          'transform',
-          'translate(439.3176992196805,785.1565570938741) scale(0.3961174054624845)'
-        )
+      // d3
+      //   .select('.zoomController')
+      //   .attr(
+      //     'transform',
+      //     'translate(439.3176992196805,785.1565570938741) scale(0.3961174054624845)'
+      //   )
     }
   )
 })()

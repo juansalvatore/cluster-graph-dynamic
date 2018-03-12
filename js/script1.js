@@ -283,6 +283,14 @@
                 return 5
               })
 
+            // .filter(function(d) {
+            //   if (d.name === 'Academia de Diseńo') {
+            //     console.log(d)
+            //   } else {
+            //     return d
+            //   }
+            // })
+
             this.select('text').style('fill-opacity', 1)
           },
 
