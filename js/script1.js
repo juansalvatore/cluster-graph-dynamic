@@ -38,7 +38,7 @@
         : d3.scale.category20c()
       chart.d3.zoom = d3.behavior.zoom()
 
-      chart.layers.base = chart.base.append('g')
+      chart.layers.base = chart.base.append('g').attr('class', 'zoomController')
 
       chart.name(chart.options.name || 'name')
       chart.value(chart.options.value || 'value')

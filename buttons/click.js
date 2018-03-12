@@ -2,7 +2,7 @@ document.addEventListener(
   'DOMContentLoaded',
   function() {
     // click styling
-    let buttonOne = document.getElementById('button-one')
+    let buttonOne = d3.selectAll('#button-one')
     let buttonTwo = document.getElementById('button-two')
     let buttonThree = document.getElementById('button-three')
     let buttonFour = document.getElementById('button-four')

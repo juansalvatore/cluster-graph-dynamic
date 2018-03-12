@@ -1450,13 +1450,16 @@
       // create buttons
       var buttonContainer = d3.select('#form-container')
       var buttonsData = d3.selectAll('path.true')
-      console.log('data', buttonsData[0]) // consultar
+      // console.log('data', buttonsData[0]) // consultar
 
       buttonContainer
         .selectAll('button')
         .data(buttonsData[0])
         .enter()
         .append('button')
+        .attr('id', function(d) {
+          return d.__data__.target.level
+        })
         .attr('class', 'button')
         .attr('type', 'button')
         .text(function(d) {
@@ -1464,14 +1467,29 @@
         })
         .on('click', function(d) {
           var branch = d.className.baseVal.split(' ')[1]
+          var buttonClicked = this.getAttribute('id')
+
+          d3
+            .selectAll('button')
+            .transition()
+            .attr('class', 'button')
+
+          d3
+            .selectAll('button#' + buttonClicked)
+            .transition()
+            .attr('class', 'button expand')
+
           d3
             .selectAll('path')
             .transition()
             .style('opacity', 0.1)
+
           d3
             .selectAll('text')
             .transition()
             .style('opacity', 0.1)
+            .style('font-weight', 100)
+
           d3
             .selectAll('circle')
             .filter(function(d) {
@@ -1491,8 +1509,52 @@
             .selectAll(selectedBranch)
             .transition()
             .style('opacity', 1)
+            .style('font-weight', 700)
           // document.body.style.cursor = 'pointer'
         })
+
+      buttonContainer
+        .append('button')
+        .attr('id', 'button-one')
+        .attr('class', 'button')
+        .attr('type', 'button')
+        .text('Ver todo')
+        .on('click', function(d) {
+          var buttonClicked = this.getAttribute('id')
+
+          d3
+            .selectAll('button')
+            .transition()
+            .attr('class', 'button')
+
+          d3
+            .selectAll('button#' + buttonClicked)
+            .transition()
+            .attr('class', 'button expand')
+
+          d3
+            .selectAll('path')
+            .transition()
+            .style('opacity', 1)
+          d3
+            .selectAll('text')
+            .transition()
+            .style('opacity', 1)
+            .style('font-weight', 100)
+
+          d3
+            .selectAll('circle')
+            .transition()
+            .style('opacity', 1)
+        })
+
+      // zoom
+      d3
+        .select('.zoomController')
+        .attr(
+          'transform',
+          'translate(439.3176992196805,785.1565570938741) scale(0.3961174054624845)'
+        )
     }
   )
 })()
