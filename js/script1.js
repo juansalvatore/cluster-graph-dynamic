@@ -229,7 +229,7 @@
           return this.append('g')
             .classed('node', true)
             .style('fill', function(d) {
-              return d.type
+              return d.color
             })
         },
 
@@ -323,7 +323,7 @@
                 return count++
               })
               .style('stroke', function(d) {
-                return d.target.level
+                return d.target.color
               })
               // LINEAS GROSOR
               .style('stroke-width', 4)
